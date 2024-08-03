@@ -1,0 +1,360 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact span {
+    margin-right: 20px;
+}
+
+.order-button {
+    text-decoration: none;
+    background-color: #ff6700;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.breadcrumb {
+    margin-bottom: 20px;
+    color: #ff6700;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #ff6700;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.input-group {
+    margin: 10px auto;
+    padding: 5px;
+    width: 300px;
+    font-size: medium;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+input:focus {
+    border-color: #ff6700;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 103, 0, 0.5);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 13rem;
+    height: 3rem;
+    background-size: 300% 300%;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+    transition: 0.5s;
+    animation: gradient_301 5s ease infinite;
+    border: double 4px transparent;
+    background-image: linear-gradient(#212121, #212121), linear-gradient(137.48deg, #ffdb3b 10%, #FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    cursor: pointer;
+}
+
+.btn1 strong {
+    z-index: 2;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #FFFFFF;
+    text-shadow: 0 0 4px white;
+}
+
+#container-stars {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+}
+
+#glow {
+    position: absolute;
+    display: flex;
+    width: 12rem;
+}
+
+.circle {
+    width: 100%;
+    height: 30px;
+    filter: blur(2rem);
+    animation: pulse_3011 4s infinite;
+    z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+    background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+    background: rgba(142, 81, 234, 0.704);
+}
+
+.btn1:hover #container-stars {
+    z-index: 1;
+    background-color: #212121;
+}
+
+.btn1:hover {
+    transform: scale(1.1);
+}
+
+.btn1:active {
+    border: double 4px #FE53BB;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: none;
+}
+
+.btn1:active .circle {
+    background: rgba(254, 83, 186, 0.596);
+}
+
+#stars {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    background-size: 300% 300%;
+    animation: gradient 5s linear infinite;
+    border-radius: 5rem;
+}
+
+@keyframes gradient_301 {
+    0%, 100% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes gradient {
+    0%, 100% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes pulse_3011 {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.7);
+    }
+}
+
+@keyframes pulse_301 {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.7);
+    }
+}
+
+.input-group p.message {
+    color: red;
+    font-size: small;
+}
+
+.order {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.order h2 {
+    margin-bottom: 10px;
+    color: #ff6700;
+}
+
+.order-continue-button {
+    padding: 10px 20px;
+    background-color: #ff6700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.order-continue-button:hover {
+    background-color: #e65c00;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.image1, .image2, .image3 {
+    width: 500px;
+    height: 500px;
+    padding: 25px;
+    /* Remove margin and add flex property */
+    margin: 0; /* Remove any existing margin */
+    display: flex; /* Ensure images are displayed in a row */
+    perspective: 10px;
+    transform: rotateX();
+}
+
+/* Adjust margin between images */
+.image1, .image2 {
+    margin-right: 10px;
+}
+
+/* Styling for images */
+.image1 img, .image2 img, .image3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+@keyframes rotateAnimation {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Apply animation to each image */
+.image1:hover, .image2:hover, .image3:hover {
+    animation: rotateAnimation 5s linear infinite; /* Adjust duration and timing function as needed */
+}
+
+/* Styling for images */
+.image1 img, .image2 img, .image3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+svg {
+    /* 	position:relative; */
+        height:150px;
+        width:150px;
+    /* 	border:1px solid red; */
+    }
+    body{
+        background:#224;
+    }
+    .box {
+    
+      margin-left: 50%;
+      margin-top: 100px;
+        transform:translate(-50%,-50%);
+        width:100%;
+        text-align:center;
+    }
+
+   
